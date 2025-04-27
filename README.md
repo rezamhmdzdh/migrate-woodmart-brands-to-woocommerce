@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# migrate-woodmart-brands-to-woocommerce
-=======
 # Migrate Woodmart Brands to WooCommerce Brands
 
 This plugin allows you to easily migrate brands from the Woodmart theme's product attribute to WooCommerce Product Brands taxonomy. With just one click, the migration process transfers your brands to the correct taxonomy, keeping your website organized.

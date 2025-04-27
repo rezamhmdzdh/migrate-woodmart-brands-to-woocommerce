@@ -56,7 +56,7 @@ add_action('wp_ajax_migrate_brands_batch', function () {
 
             $new_term_id = $new_term['term_id'];
 
-            // انتقال تصویر
+
             $image_meta = get_term_meta($brand['id'], 'image', true);
             if (!empty($image_meta)) {
                 if (is_serialized($image_meta)) {
@@ -67,11 +67,9 @@ add_action('wp_ajax_migrate_brands_batch', function () {
                 }
             }
         } else {
-            // اگر برند قبلا وجود داشته باشد
             $new_term_id = is_array($term_exists) ? $term_exists['term_id'] : $term_exists;
         }
 
-        // اتصال محصولات به برند جدید
         $products = get_posts([
             'post_type' => 'product',
             'posts_per_page' => -1,

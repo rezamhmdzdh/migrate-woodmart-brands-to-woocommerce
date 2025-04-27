@@ -38,8 +38,8 @@ add_action('wp_ajax_migrate_brands_batch', function () {
     $failed = [];
 
     foreach ($brands as $brand) {
-        $attribute_taxonomy = 'pa_brand'; // ویژگی برند قبلی
-        $woo_brand_taxonomy = 'product_brand'; // برند جدید ووکامرس
+        $attribute_taxonomy = 'pa_brand';
+        $woo_brand_taxonomy = 'product_brand';
 
         $term_exists = term_exists($brand['slug'], $woo_brand_taxonomy);
 
